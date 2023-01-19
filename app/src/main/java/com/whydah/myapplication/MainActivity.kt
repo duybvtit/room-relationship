@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        val db = Room.databaseBuilder(this, MyRoomDB::class.java, "my-room-db").fallbackToDestructiveMigration().build()
+        val db = Room.databaseBuilder(this, MyRoomDB::class.java, "my-room-db").build()
 
         lifecycleScope.launch(Dispatchers.IO) {
             db.studentDao().insertStudent(Student(firstName = "Duy", lastName = "Bui", id = 0))

@@ -4,6 +4,7 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 
 @Entity(
+    tableName = "playlist_song_cross_ref",
     primaryKeys = ["playlistId", "songId"], foreignKeys = [
         ForeignKey(
             entity = Song::class,
